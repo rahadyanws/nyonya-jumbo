@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Product;
+use App\Livewire\AttendanceKiosk;
 
 Route::get('/', function () {
     // Ambil produk yang statusnya 'Available' saja
@@ -16,3 +17,5 @@ Route::get('/', function () {
 
     return view('welcome', compact('products', 'categories'));
 });
+
+Route::get('/absensi', AttendanceKiosk::class);

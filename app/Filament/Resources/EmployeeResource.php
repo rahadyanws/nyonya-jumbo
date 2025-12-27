@@ -40,6 +40,14 @@ class EmployeeResource extends Resource
                     ->required(),
                 Forms\Components\Toggle::make('is_active')
                     ->required(),
+                Forms\Components\TextInput::make('pin')
+                    ->label('PIN Absensi (6 Digit)')
+                    ->numeric()
+                    ->minLength(4)
+                    ->maxLength(6)
+                    ->password() // Agar tidak diintip
+                    ->revealable()
+                    ->required(),
             ]);
     }
 
